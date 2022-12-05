@@ -8,6 +8,7 @@ import time
 import imageCaptureTimer as capTimer
 import classifier
 
+waitMinutes = 5 * 60
 # Referenced this article on how to use opencv closing
 # https://www.tutorialspoint.com/performing-a-closing-operation-on-an-image-using-opencv
 
@@ -111,7 +112,7 @@ if __name__ == "__main__":
     runTimer = True
     if webcam:
         commandQueue = Queue()
-        timerProcess = Process(target=capTimer.captureTimer, args=(5, commandQueue))
+        timerProcess = Process(target=capTimer.captureTimer, args=(waitSeconds, commandQueue))
         timerProcess.start()
         detectMotion(webcam, commandQueue)
         timerProcess.runTimer = False
