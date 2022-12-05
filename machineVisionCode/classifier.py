@@ -13,7 +13,7 @@ imagesToClassify = []
 
 # not positive my labels are correct
 
-y_labels = {0:'car',1:'human',2:'cat',3:'motorcycle',4:'dog'}
+y_labels = {0:'car',1:'human',2:'cat',3:'motorcycle',4:'human'}
 csv_columns = ['timestamp', 'people', 'dogs', 'other']
 
 def setCSV(csvLocation):

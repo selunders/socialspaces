@@ -38,12 +38,12 @@ d3.csv("static/sampleData.csv").then(makeChart).then(()=>{
             text: "Activity Today",
           },
           scales: {
-            yAxes: [{
-              color: "white",
-            }],
-            xAxes: [{
-              color: "white",
-            }],
+            y: {
+              ticks: {color: 'white'},
+            },
+            x: {
+              ticks: {color: 'white'},
+            },
           }
         },
       });
