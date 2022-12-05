@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+
+    <!-- <script type="text/javascript" src="http://www.chartjs.org/assets/Chart.js"></script> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <title>Social Activity</title>
+</head>
+
+<body>
+    <section class='section-graph'>
+        <h1>Social Activity</h1>
+        <div class='chart'>
+            <canvas id="myChart" width="400" height="300"></canvas>
+        </div>
+    </section>
+    <!-- <section class='section-options'>
+        <h2>Options</h2>
+        <div class='buttons'>
+            <a href="http://">Refresh ⟳</a>
+            <button class='btn' onclick="location.reload()">Refresh ⟳</button>
+            <button class='btn' onclick="location.reload()">Past month</button>
+            <button class='btn' onclick="location.reload()">Past week</button>
+            <button class='btn' onclick="location.reload()">Today</button>
+        </div>
+    </section> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='renderChart.js') }}">
+    </script>
+</body>
+<footer>
+</footer>
+
+</html>
